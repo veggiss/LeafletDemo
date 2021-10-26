@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "esModuleInterop" : true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "react",
+    "moduleResolution": "node"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

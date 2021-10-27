@@ -103,7 +103,7 @@ const App: FC = () => {
                             })),
                             maxValue: Math.max.apply(
                                 Math,
-                                countyItems.map((item) => item.cases.total),
+                                countyItems.map((item) => item.cases.new.d14),
                             ),
                         },
                         municipality: countyItems.map((countyItem) => {
@@ -121,7 +121,7 @@ const App: FC = () => {
                                 })),
                                 maxValue: Math.max.apply(
                                     Math,
-                                    filteredItems.map((item) => item.cases.total),
+                                    filteredItems.map((item) => item.cases.new.d14),
                                 ),
                             };
                         }),
@@ -141,9 +141,6 @@ const App: FC = () => {
         const clickedData = data.municipality.filter((item) => item.parentCode === selectedData.county);
 
         console.log(clickedData);
-        //if (clickedData) {
-        //    const percent = percentage(clickedData.cases.total, data.maxValue);
-        //}
     }, [setSelectedData]);
 
     /*
@@ -190,11 +187,11 @@ const App: FC = () => {
                     });
                 }}
                 style={{
-                    fillColor: getColor(percentage(item.cases.total, maxValue)),
-                    weight: isSelected ? 1.5 : 1,
+                    fillColor: getColor(percentage(item.cases.new.d14, maxValue)),
+                    weight: isSelected ? 2 : 1,
                     //stroke-width: to have a constant width on the screen need to adapt with scale
                     opacity: 1,
-                    color: isSelected ? 'blue' : 'white',
+                    color: isSelected ? 'lightblue' : 'white',
                     fillOpacity: 0.6,
                 }}
                 data={item.geoData.geometry}
@@ -207,6 +204,7 @@ const App: FC = () => {
             <MapContainer
                 className="map-container"
                 minZoom={4}
+                maxZoom={10}
                 whenCreated={(map: LeafletMap) => setMap(map)}
                 bounds={latLngBounds([
                     [72.12793628105592, 33.70605468750001],

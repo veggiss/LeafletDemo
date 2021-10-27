@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "start": "node .",
-    "start-dev": "webpack serve --port 3000 --mode development",
+    "start-dev": "webpack serve --port 4000 --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "devDependencies": {

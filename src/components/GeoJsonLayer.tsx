@@ -21,7 +21,6 @@ const GeoJsonLayer: FC = () => {
 
     useMapEvents({
         click: () => setSelectedCounty(null),
-        moveend: () => console.log(map.getBounds()),
     });
 
     useEffect(() => {

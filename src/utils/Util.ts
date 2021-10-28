@@ -1,4 +1,5 @@
 import { GeoJsonObject } from 'geojson';
+import { latLngBounds } from 'leaflet';
 
 const counties: { features: GeoData[] } = require('../geodata/fylker.json');
 const municipalities: { features: GeoData[] } = require('../geodata/kommuner.json');
@@ -44,6 +45,11 @@ export interface MapData {
     county: County;
     municipality: Municipality[];
 }
+
+export const initialBounds = latLngBounds([
+    [71.7739410364347, 32.16796875000001],
+    [57.4922136667007, 3.2958984375000004],
+]);
 
 export const getAvgCases = (item: Data) => Math.round((item.cases.new.d14 / item.population) * 100000);
 

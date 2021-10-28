@@ -1,6 +1,7 @@
 import { GeoJsonObject } from 'geojson';
 import { latLngBounds } from 'leaflet';
 
+// const coronaData: { items: Data[] } = require('../geodata/corona.json');
 const counties: { features: GeoData[] } = require('../geodata/fylker.json');
 const municipalities: { features: GeoData[] } = require('../geodata/kommuner.json');
 

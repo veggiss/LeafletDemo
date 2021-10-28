@@ -46,11 +46,6 @@ export interface MapData {
     municipality: Municipality[];
 }
 
-export const initialBounds = latLngBounds([
-    [71.7739410364347, 32.16796875000001],
-    [57.4922136667007, 3.2958984375000004],
-]);
-
 export const getAvgCases = (item: Data) => Math.round((item.cases.new.d14 / item.population) * 100000);
 
 export const getColor = (avgCases: number) => {

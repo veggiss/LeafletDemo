@@ -1,6 +1,6 @@
 -- 1. MapContainer
 
-	// App
+	// App -- (https://www.satsig.net/world105.gif)
 
 	export const initialBounds = latLngBounds([
 	    [71.7739410364347, 32.16796875000001],
@@ -23,7 +23,7 @@
 
 	// CustomJsonLayer -- (getData)
 
-	// CustomGeoJson
+	// CustomGeoJson -- (https://i.imgur.com/iRRIDvg.png)
 
 	return <GeoJSON data={item.geoData.geometry} />
 

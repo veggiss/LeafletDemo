@@ -1,4 +1,4 @@
--- 1.
+-- 1. MapContainer
 
 	// App
 
@@ -21,11 +21,13 @@
 
 -- 2.
 
+	// CustomJsonLayer -- (getData)
+
 	// CustomGeoJson
 
 	return <GeoJSON data={item.geoData.geometry} />
 
-	// GeoJsonLayer
+	// GeoJsonLayer -- (https://react-leaflet.js.org/docs/example-layers-control/)
 
 	<LayerGroup>
 	    {mapData &&
@@ -53,8 +55,6 @@
 	    color: 'white',
 	}}
 
--- 4.
-
 	// CustomGeoJson
 
 	eventHandlers={{
@@ -69,7 +69,7 @@
 	    },
 	}}
 
--- 5.
+-- 4.
 
 	// GeoJsonLayer
 
@@ -86,9 +86,9 @@
 
 	onClick={() => fitCameraToBounds(item.geoData.geometry)}
 
--- 6.
+-- 5.
 
-	// CustomGeoJson
+	// CustomGeoJson -- (https://react-leaflet.js.org/docs/core-architecture/)
 
 	const areaName = item.geoData.properties.navn[0].navn;
 
@@ -108,7 +108,7 @@
 	    box-shadow: none;
 	}
 
--- 7.
+-- 6.
 
 	// GeoJsonLayer
 
@@ -119,12 +119,12 @@
 	    setSelectedCounty(item.geoData.properties.fylkesnummer);
 	}}
 
--- 8.
+-- 7.
 
 	// GeoJsonLayer
 
 	const selectedData = selectedCounty && mapData.municipality.find((item) => item.parentCounty === selectedCounty).items;
-	
+
 	{selectedData &&
 	    selectedData.map((item) =>
 	        item.geoData && item.code !== selectedCounty ? (
@@ -136,7 +136,7 @@
 	        ) : null,
 	    )}
 
--- 9.
+-- 8.
 
 	// CustomGeoJson
 
@@ -160,7 +160,7 @@
 	    </table>
 	</Tooltip>
 
--- 10.
+-- 9.
 
 	// GeoJsonLayer
 
@@ -172,7 +172,7 @@
 
 	bubblingMouseEvents={false}
 
--- 11.
+-- 10.
 
 	// App
 

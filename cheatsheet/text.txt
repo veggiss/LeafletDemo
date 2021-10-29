@@ -125,9 +125,11 @@
 
 	const selectedData = selectedCounty && mapData.municipality.find((item) => item.parentCounty === selectedCounty).items;
 
+	...mapData.county: item.code !== selectedCounty
+
 	{selectedData &&
 	    selectedData.map((item) =>
-	        item.geoData && item.code !== selectedCounty ? (
+	        item.geoData ? (
 	            <CustomGeoJson
 	                key={item.code}
 	                item={item}

@@ -1,5 +1,6 @@
 -- 1. MapContainer
 
+	// 	MapContainer er ansvarlig for å lage Leaflet instansen.
 	// App -- (https://www.satsig.net/world105.gif)
 
 	export const initialBounds = latLngBounds([
@@ -23,6 +24,7 @@
 
 	// CustomJsonLayer -- (getData)
 
+	// GeoJSON er et format som inneholder en rekke geografiske datastrukturer
 	// CustomGeoJson -- (https://i.imgur.com/iRRIDvg.png)
 
 	return <GeoJSON data={item.geoData.geometry} />
